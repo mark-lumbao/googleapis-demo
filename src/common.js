@@ -11,7 +11,7 @@ function listUsers(auth) {
   const service = google.admin({ version: "directory_v1", auth });
   service.users.list(
     {
-      customer: "my_customer",
+      customer: process.env.GSUITE_ID,
       maxResults: 10,
       orderBy: "email",
     },

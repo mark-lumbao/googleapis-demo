@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:oauth": "node src",
-    "start:service-acct": "node src/service-acct"
+    "start:oauth": "node -r dotenv/config src",
+    "start:service-acct": "node -r dotenv/config  src/service-acct"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@googleapis/docs": "^0.2.0",
+    "dotenv": "^16.0.0",
     "googleapis": "^39.2.0",
     "node-fetch": "^2.6.7"
   }
